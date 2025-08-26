@@ -1,0 +1,55 @@
+.element{
+    border: 1px solid #333;
+    padding: 4px;
+    width: 65px;
+    height: 65px;
+
+}
+.element:hover{    /pseudoclase/
+    transform: scale(1.1);
+
+}
+.element.number{
+
+    font-size: 10px;
+    text-align: left;
+}
+.element.simbol{
+
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.element.name{
+
+    font-size: 9px;
+    
+}
+
+.nonmetal{
+    background-color: rgb(240, 252, 255);
+}
+
+.metAlca{
+    background-color: rgb(218, 105, 105);
+}
+
+.MetalesAlcalinos{
+    background-color: rgb(130, 238, 206);
+}
+
+.Metaloides{
+    background-color: rgba(199, 199, 67, 0.473);
+}
+
+
+.element::after{  /* Pseudoelemento*/
+
+    content: "";
+    
+}
+.element::before{  /* Pseudoelemento*/
+
+    content: "";
+    
+}
