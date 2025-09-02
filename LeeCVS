@@ -1,0 +1,86 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+ 
+ 
+public class LeeCSV {
+    public static void main(String[] args) {
+        
+        Scanner jh = new Scanner (System.in);
+        
+        String rutaArchivo = "datos.csv";
+        
+        int Cuantos=0;
+        int suma = 0;//Suma de Edades
+        int Cantidad = 0;// Cantidad de Edades
+        
+        String [] estudiantes = new String[4];
+        
+        estudiantes[0]="Ana";
+        estudiantes[1]="Luis";
+        estudiantes[2]="Martha";
+        estudiantes[3]="Carlos";
+        
+        
+        int[] notas = new int[8];
+        notas[0]=23;
+        notas[1]=85;
+        notas[2]=30;
+        notas[3]=90;
+        notas[4]=22;
+        notas[5]=95;
+        notas[6]=25;
+        notas[7]=88;
+
+        
+        int [] edad = new int [4];
+        
+        edad[0]=jh.nextInt();
+        edad[1]=jh.nextInt();
+        edad[2]=jh.nextInt();
+        edad[3]=jh.nextInt();
+        
+        
+
+        
+        for (int i = 0; i <= 7; i++) {
+            
+            if (notas[i] >= 90) {
+                Cuantos = Cuantos + 1;
+            }
+        }
+        
+        System.out.println(" La Cantidad de Estudiantes con una nota mayor o igual a 90 son " + Cuantos);
+        System.out.println();
+        
+        int Promedio;
+        
+        for (int i = 0; i <= 3; i++) {
+            suma = suma + edad[i];
+            Cantidad = Cantidad + 1;
+        }
+          Promedio = suma / Cantidad;
+          
+        System.out.println();
+        System.out.println();
+        System.out.println(" La suma total de Edades es " + suma);
+        System.out.println(" La cantidad de notas es " + Cantidad);
+        System.out.println(" El Promedio es el Siguiente " + Promedio);
+        
+
+        
+        try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] columnas = linea.split(",");
+                for (String celda : columnas) {
+                    System.out.print(celda + "\t");
+                }
+                System.out.println();
+            }
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo CSV: " + e.getMessage());
+        }
+    }
+}
