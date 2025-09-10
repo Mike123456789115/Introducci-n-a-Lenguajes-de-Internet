@@ -1,0 +1,60 @@
+header,footer{ /*Vamos a editar el header encabezado y el footer el pie de pagina*/
+
+    width: 100%;/*es el porcentage de ancho del cuadro debe estar al 100% para que que llegue a los bordes de la pagina*/
+    background-color:aquamarine;   /*Color del fondo del cuadro del encabezado y el fondo de pie de pagina*/
+    padding: 16px;   /*Altura del cuadro del encabezado y pie de pagina*/
+    color: black;  /*Color de la letra o texto dentro del encabezado y pie de pagina*/
+    text-align: center;/*text-aling alinea el texto del cuadro cabecera y pie de pagina al centro gracias a center*/
+}
+
+nav{
+
+    display: flex;/*Esto Alinea Los enlaces en fila Horizontal aunque ya vienen asi por defecto */
+    background-color: rgb(202, 255, 11);
+    padding: 12px;
+    justify-content: space-around;/*Justify-coutent Solo funciona con display flex y space-around no solo centra los enlaces sino que pone el mismo espacio entre cada uno de ellos*/
+}
+
+
+.cards{ /*Punto 3 */
+    
+display: flex;  /*Las cards o targetas con la noticia e imagen apareceran en fila horizontal y no verticalmente*/
+gap: 80px; /*El espacio entre Cada targeta para que no queden pegadas una de la otra */
+   
+}
+
+.card img{/*Esto solo afecta a los img dentro de card y no a card en si*/
+
+    width: 90%;/*Ancho de las imagenes de las 3 card o noticias*/
+
+    height: auto;
+}
+
+.card{
+flex: 1 1 300px;
+
+box-sizing: border-box;
+
+}
+
+.introduccion{
+
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.tabla-noticias table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.tabla-noticias th, .tabla-noticias td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.tabla-noticias th {
+    background: #1d7fb8;
+    color: white;
+}
